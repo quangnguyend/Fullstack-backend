@@ -1,0 +1,161 @@
+{
+  "server": {
+    "protocol": "https",
+    "domain": "localhost",
+    "port": 5000
+  },
+  "redis": {
+    "domain": "redis",
+    "port": 6379
+  },
+  "mongo": {
+    "username": "",
+    "password": "",
+    "host_one": "localhost",
+    "port_one": "27017",
+    "host_two": "",
+    "port_two": "",
+    "host_three": "",
+    "port_three": "",
+    "dbs": ["mydatabase"],
+    "path": "/server/data",
+    "useReplica": false,
+    "options": {
+      "server": {
+        "ssl": false,
+        "sslValidate": false,
+        "socketOptions": {
+          "auto_reconnect": true,
+          "connectTimeoutMS": 30000
+        }
+      },
+      "replset": {
+        "rs_name": "development",
+        "checkServerIdentity": true,
+        "ssl": true,
+        "sslValidate": false,
+        "socketOptions": {
+          "connectTimeoutMS": 30000,
+          "socketTimeoutMS": 10000
+        }
+      }
+    }
+  },
+  "socket": {
+    "url": "https://localhost",
+    "port": "443",
+    "path": "socket.io/socket.io.js"
+  },
+  "security": {
+    "ssl_certs": {
+      "rKey": "/server/certs/localhost-srv.key",
+      "rCert": "/server/certs/localhost-srv.crt",
+      "rCA": "/server/certs/localhost-ca.crt",
+      "passphrase": ""
+    },
+    "session_secret": "'1As23Fdfgb34345!$#fd'",
+    "crypto": {
+      "algorithm": "aes-256-ctr",
+      "password": "d6F3Efeq-QZ.21a"
+    },
+    "file_encryption":{
+      "secret": "AUveNir-FiEL-SeCRet",
+      "algorithm": "aes-256-ctr"
+    }
+  },
+  "file_scan": {
+    "scan_log": false,
+    "debug_mode": false,
+    "file_list": false,
+    "scan_recursively": true,
+    "clamscan": {
+      "active": true
+    },
+    "clamdscan": {
+      "multiscan": true,
+      "active": true
+    },
+    "preference": "clamdscan"
+  },
+  "file_upload": {
+    "maxFieldSize": 10485760,
+    "keepExtensions": true
+  },
+  "debug": {
+    "log": true,
+    "warn": true,
+    "time": true,
+    "error": true
+  },
+  "integrations": {
+    "newrelic": {
+      "app_name": "Auvenir Core",
+      "license_key": "010c0f2339d3a4ad03c0314b6f5d08299b247956",
+      "logging": {
+        "level": "info"
+      }
+    },
+    "qa": {
+      "authID": "FHnfNzi3aa2d-ESOIzhkqvpM4",
+      "apiKey": "0K7bJ9xXTgFT-zpouzKc49Y7p"
+    },
+    "aws": {
+      "accessKeyId": "unknown",
+      "secretAccessKey": "unknown",
+      "region": "us-east-1"
+    },
+    "clearbit": {
+      "id": "8595a679d431a1463623c1cda7b990db"
+    },
+    "idq": {
+      "keys":{
+        "id": "f5dPG3NNGWo9WjTE",
+        "secret": "iuj9YJsZ6rsEUDBN",
+        "callback": "https://auvenir.com/"
+      },
+      "user": "idqadmin",
+      "pass": "5qEMZbZAvbylHqKa",
+      "regUrl": "https://auvenir.idquanta.com/idqadmin/api/v1",
+      "logUrl": "https://auvenir.idquanta.com/idqoauth/api/v1"
+    },
+    "gdrive": {
+      "appID": "617504056513",
+      "APIKey": "AIzaSyCp3IycffDxMVcrlPBlpULer-M30fLzXL4",
+      "CLIENT_ID": "617504056513-i16qbi95099urabakpdf5p1f9iqkagf7.apps.googleusercontent.com",
+      "CLIENT_SECRET": "XFIFl0xrqYFyauwrYb780I2Q",
+      "project_id": "auvenir-1324"
+    },
+    "nodemailer": {
+      "service": "gmail",
+      "auth": {
+        "user": "no-reply@auvenir.com",
+        "pass": "BSLabs123!"
+      },
+      "from": "no-reply@auvenir.com"
+    },
+    "twilio": {
+      "account": "AC3df6069e65b411301428da1da2cc7dd8",
+      "token": "76ac615503857e602afc6007f1f96764",
+      "number": "+12044003134"
+    },
+    "slack": {
+      "APP_NAME": "Auvenir",
+      "URL": "https://hooks.slack.com/services/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",
+      "channel": {
+        "GENERAL": "#app-notifications",
+        "SIGNUP_AUDITOR": "#app-signup-auditor",
+        "SIGNUP_USER": "#app-signup-user"
+      }
+    },
+    "google_analytics": {
+      "id": "UA-64858905-1"
+    },
+    "hot_jar": {
+      "id": "49781",
+      "hjsv": "5"
+    },
+    "intercom": {
+      "id": "b3bssrb1"
+    }
+  }
+}
